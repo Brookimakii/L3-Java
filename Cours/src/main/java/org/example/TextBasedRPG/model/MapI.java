@@ -1,4 +1,4 @@
-package org.example.TextBasedRPG;
+package org.example.TextBasedRPG.model;
 
 import lombok.Getter;
 

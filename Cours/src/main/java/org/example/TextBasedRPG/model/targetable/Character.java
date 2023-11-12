@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.example.TextBasedRPG.model.weapons.Fist;
 import org.example.TextBasedRPG.model.weapons.Weapon;
 
 @NoArgsConstructor
@@ -30,7 +31,7 @@ public class Character {
   private int curMana;
   
   //Equipment
-  private Weapon equipedWeapon;
+  private Weapon equipedWeapon = new Fist();
   
   //Inventory
   private ArrayList<Weapon> weapons = new ArrayList<>();

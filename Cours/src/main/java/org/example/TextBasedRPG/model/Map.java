@@ -1,20 +1,26 @@
-package org.example.TextBasedRPG;
+package org.example.TextBasedRPG.model;
 
 abstract class Map implements MapI {
   int[][] gridMap;
-  int playerPosX, playerPosY;
+  int playerPosX, playerPosY, endX, endY;
   double randomEncounterRate;
   
-  public Map(int originPlayerX, int originPlayerY, double randomEncounterRate, int[][] gridMap) {
+  public Map(int originPlayerX, int originPlayerY, double randomEncounterRate, int[][] gridMap, int endX, int endY) {
     this.playerPosX = originPlayerX;
     this.playerPosY = originPlayerY;
     this.randomEncounterRate = randomEncounterRate;
     this.gridMap = gridMap;
+    this.endX = endX;
+    this.endY = endY;
   }
   
   public boolean doRansomEncounter() {
     double rand = Math.random();
     return rand <= randomEncounterRate;
+  }
+  
+  public boolean doPlayerArrived(){
+    return playerPosX == endX && playerPosY == endY;
   }
   
   @Override
