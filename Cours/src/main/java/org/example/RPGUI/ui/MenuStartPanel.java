@@ -52,6 +52,8 @@ public class MenuStartPanel extends JPanel {
         this.pseudoLabel = new JLabel("Choose your name : ");
         this.pseudoField = new JTextField();
 
+        //TODO: Set my Class
+        
         this.radioMage = new JRadioButton("MAGE");
         this.radioWarrior = new JRadioButton("WARRIOR");
         this.radioElf = new JRadioButton("ELF");

@@ -5,13 +5,13 @@ import lombok.Getter;
 @Getter
 public class Game {
 
-    private final Map map;
+    private final GameMap map;
 
     private final Player player;
 
     public Game(GameInputs gameInputs) {
         this.player = new Player(gameInputs.getPlayerName(), gameInputs.getPlayerCast());
-        this.map = new Map();
+        this.map = new GameMap();
     }
     
 }
